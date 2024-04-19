@@ -11,7 +11,7 @@ import { ShoppingCartIcon } from "lucide-react";
 const SidebarCart = () => {
     return (
         <Sheet>
-            <SheetTrigger>
+            <SheetTrigger aria-label="open cart">
                 <ShoppingCartIcon size={30} className="stroke-primary" />
             </SheetTrigger>
             <SheetContent>
