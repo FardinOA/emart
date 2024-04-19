@@ -19,7 +19,7 @@ import { Input } from "../ui/input";
 
 const Footer = () => {
     return (
-        <footer className="pb-56">
+        <footer className=" ">
             <div className="bg-primary text-white p-4 lg:p-0">
                 <div className="   base-container py-4 divide-y-2  lg:divide-y-0 lg:divide-x-2 grid grid-cols-1 lg:grid-cols-4  ">
                     <div className="flex gap-4 pb-4 lg:pb-0 ">

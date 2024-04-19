@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import CustomImage from "../uitils/customImage";
 import Link from "next/link";
-import { Eye } from "lucide-react";
+import { Eye, Minus, Plus, ShoppingCart } from "lucide-react";
 import CustomTooltip from "../uitils/customTooltip";
 
 import {
@@ -13,6 +13,8 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
+import ProductCarousel from "./productCarousel";
+import { Input } from "@/components/ui/input";
 
 const Card = () => {
     return (
@@ -72,15 +74,55 @@ const QuickView = () => {
                     <Eye />
                 </Button>
             </DialogTrigger>
-            <DialogContent>
-                <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
-                    <DialogDescription>
-                        This action cannot be undone. This will permanently
-                        delete your account and remove your data from our
-                        servers.
-                    </DialogDescription>
-                </DialogHeader>
+            <DialogContent className="grid grid-cols-2 gap-4 lg:!max-w-[40rem] ">
+                <div>
+                    <ProductCarousel />
+                </div>
+                <div>
+                    <DialogHeader>
+                        <DialogTitle>Red Radish 1 pack</DialogTitle>
+                        <DialogDescription className="text-primary ">
+                            $20,00
+                        </DialogDescription>
+                        <DialogDescription>
+                            This action cannot be undone. This will permanently
+                            delete your account and remove your data from our
+                            servers.
+                        </DialogDescription>
+
+                        <div className="pt-4 flex items-center gap-4 ">
+                            <div className="flex items-center">
+                                <Button
+                                    variant="icon"
+                                    className={
+                                        "bg-primary text-primary-foreground rounded-r-none"
+                                    }
+                                    size={"sm"}
+                                >
+                                    <Minus size={15} />
+                                </Button>
+                                <Input
+                                    placeholder="1"
+                                    className="text-center h-9  w-full rounded-none border-primary ring-0 focus:!outline-none focus:!ring-offset-0   focus-visible:!ring-0 "
+                                    value={1}
+                                />
+                                <Button
+                                    variant="icon"
+                                    className={
+                                        "bg-primary text-primary-foreground rounded-l-none"
+                                    }
+                                    size={"sm"}
+                                >
+                                    <Plus size={15} />
+                                </Button>
+                            </div>
+                            <Button size={"sm"} className="gap-2">
+                                {" "}
+                                <ShoppingCart /> Add To Cart
+                            </Button>
+                        </div>
+                    </DialogHeader>
+                </div>
             </DialogContent>
         </Dialog>
     );
