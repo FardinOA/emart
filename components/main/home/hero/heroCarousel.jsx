@@ -63,8 +63,17 @@ const HeroCarousel = () => {
                                 <p className="lg:text-4xl font-bold text-gray-700">
                                     {ele.title}
                                 </p>
-                                <Button asChild={true} size="sm">
-                                    <Link href={ele.url}>Shop Now</Link>
+                                <Button
+                                    aria-label={`${ele.tag} shop now`}
+                                    asChild={true}
+                                    size="sm"
+                                >
+                                    <Link
+                                        aria-label={"shop now"}
+                                        href={ele.url}
+                                    >
+                                        Shop Now
+                                    </Link>
                                 </Button>
                             </div>
                         </div>

@@ -57,6 +57,7 @@ const Hero = () => {
                 <div className=" ">
                     {categories?.map((ele, ind) => (
                         <Button
+                            aria-label={ele.title}
                             className={cn(
                                 "items-center gap-3 w-full justify-start border-b text-gray-400 ",
                                 ind == categories.length - 1 && "border-b-0"

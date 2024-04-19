@@ -97,6 +97,7 @@ const Footer = () => {
 
                     <div className="flex gap-2 mt-4">
                         <Link
+                            aria-label={"facebook"}
                             href={`#`}
                             className={
                                 "group border p-1 rounded-lg hover:bg-primary transition-all duration-500 "
@@ -105,6 +106,7 @@ const Footer = () => {
                             <Facebook className="fill-primary stroke-primary group-hover:stroke-white group-hover:fill-white transition-all duration-500" />
                         </Link>
                         <Link
+                            aria-label={"instragram"}
                             href={`#`}
                             className={
                                 "group border p-1 rounded-lg hover:bg-primary transition-all duration-500 "
@@ -113,6 +115,7 @@ const Footer = () => {
                             <Instagram className="  stroke-primary group-hover:stroke-white   transition-all duration-500" />
                         </Link>
                         <Link
+                            aria-label={"twitter"}
                             href={`#`}
                             className={
                                 "group border p-1 rounded-lg hover:bg-primary transition-all duration-500 "
@@ -121,6 +124,7 @@ const Footer = () => {
                             <X className="fill-primary stroke-primary group-hover:stroke-white group-hover:fill-white transition-all duration-500" />
                         </Link>
                         <Link
+                            aria-label={"youtube"}
                             href={`#`}
                             className={
                                 "group border p-1 rounded-lg hover:bg-primary transition-all duration-500 "
@@ -143,6 +147,7 @@ const Footer = () => {
                         "Contact us",
                     ]?.map((ele, ind) => (
                         <Link
+                            aria-label={"facebook"}
                             href={`#`}
                             key={`customer-service-${ind}`}
                             className="hover:text-primary transition-all duration-500 text-gray-400 block py-1"
@@ -164,6 +169,7 @@ const Footer = () => {
                         "Legal Notice",
                     ]?.map((ele, ind) => (
                         <Link
+                            aria-label={"facebook"}
                             href={`#`}
                             key={`customer-service-${ind}`}
                             className="hover:text-primary transition-all duration-500 text-gray-400 block py-1 "
@@ -182,6 +188,7 @@ const Footer = () => {
                         "Self-Publish with Us",
                     ]?.map((ele, ind) => (
                         <Link
+                            aria-label={"facebook"}
                             href={`#`}
                             key={`customer-service-${ind}`}
                             className="hover:text-primary transition-all duration-500 text-gray-400 block py-1 "
@@ -203,7 +210,9 @@ const Footer = () => {
 
                 <div className="space-y-2   ">
                     <Input placeholder="Email" className="w-full" />
-                    <Button className={"w-full"}>Subscribe</Button>
+                    <Button aria-label="Subscribe" className={"w-full"}>
+                        Subscribe
+                    </Button>
                 </div>
             </div>
             <div className="base-container py-10 flex flex-col lg:flex-row gap-4 items-center justify-between ">

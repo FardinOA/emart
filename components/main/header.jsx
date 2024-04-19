@@ -36,14 +36,18 @@ const Header = () => {
                 />
                 <div className=" hidden w-full lg:flex items-center">
                     <Input placeholder="Search..." className="rounded-r-none" />{" "}
-                    <Button className="rounded-l-none">
+                    <Button aria-label="search" className="rounded-l-none">
                         <Search />
                     </Button>
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="flex items-center  ">
                         <UserCircle size={30} className="stroke-primary" />
-                        <Button variant="link" className="flex flex-col px-1">
+                        <Button
+                            aria-label="account"
+                            variant="link"
+                            className="flex flex-col px-1"
+                        >
                             <span className="text-gray-400">Sign in</span>
                             <span className="font-semibold text-black ">
                                 Account
