@@ -15,6 +15,16 @@ import {
 } from "@/components/ui/dialog";
 import ProductCarousel from "./productCarousel";
 import { Input } from "@/components/ui/input";
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer";
 
 const Card = () => {
     return (
@@ -51,7 +61,11 @@ const Card = () => {
                     </span>
                 </Link>
                 <div className=" mt-5">
-                    <Button aria-label="Add to cart" size={"sm"} className={""}>
+                    <Button
+                        aria-label="Add to cart"
+                        size={"sm"}
+                        className={"w-full"}
+                    >
                         Add to cart
                     </Button>
                 </div>
@@ -62,69 +76,69 @@ const Card = () => {
 
 const QuickView = () => {
     return (
-        <Dialog>
-            <DialogTrigger asChild>
-                <Button
-                    size={"icon"}
-                    aria-label="quick view"
-                    className={
-                        " size-6 p-1 absolute top-14 right-4   transition-all duration-500 "
-                    }
-                >
-                    <Eye />
-                </Button>
-            </DialogTrigger>
-            <DialogContent className="grid grid-cols-2 gap-4 lg:!max-w-[40rem] ">
-                <div>
-                    <ProductCarousel />
-                </div>
-                <div>
-                    <DialogHeader>
-                        <DialogTitle>Red Radish 1 pack</DialogTitle>
-                        <DialogDescription className="text-primary ">
-                            $20,00
-                        </DialogDescription>
-                        <DialogDescription>
-                            This action cannot be undone. This will permanently
-                            delete your account and remove your data from our
-                            servers.
-                        </DialogDescription>
-
-                        <div className="pt-4 flex items-center gap-4 ">
-                            <div className="flex items-center">
-                                <Button
-                                    variant="icon"
-                                    className={
-                                        "bg-primary text-primary-foreground rounded-r-none"
-                                    }
-                                    size={"sm"}
-                                >
-                                    <Minus size={15} />
-                                </Button>
-                                <Input
-                                    placeholder="1"
-                                    className="text-center h-9  w-full rounded-none border-primary ring-0 focus:!outline-none focus:!ring-offset-0   focus-visible:!ring-0 "
-                                    value={1}
-                                />
-                                <Button
-                                    variant="icon"
-                                    className={
-                                        "bg-primary text-primary-foreground rounded-l-none"
-                                    }
-                                    size={"sm"}
-                                >
-                                    <Plus size={15} />
+        <>
+            <Dialog>
+                <DialogTrigger asChild>
+                    <Button
+                        size={"icon"}
+                        aria-label="quick view"
+                        className={
+                            " size-6 p-1 absolute top-14 right-4   transition-all duration-500 "
+                        }
+                    >
+                        <Eye />
+                    </Button>
+                </DialogTrigger>
+                <DialogContent className="rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-4 w-[90%] lg:!max-w-[40rem] ">
+                    <div>
+                        <ProductCarousel />
+                    </div>
+                    <div>
+                        <DialogHeader>
+                            <DialogTitle>Red Radish 1 pack</DialogTitle>
+                            <DialogDescription className="text-primary ">
+                                $20,00
+                            </DialogDescription>
+                            <DialogDescription>
+                                This action cannot be undone. This will
+                                permanently delete your account and remove your
+                                data from our servers.
+                            </DialogDescription>
+                            <div className="pt-4 flex items-center gap-4 ">
+                                <div className="flex items-center">
+                                    <Button
+                                        variant="icon"
+                                        className={
+                                            "bg-primary text-primary-foreground rounded-r-none"
+                                        }
+                                        size={"sm"}
+                                    >
+                                        <Minus size={15} />
+                                    </Button>
+                                    <Input
+                                        placeholder="1"
+                                        className="text-center h-9  w-full rounded-none border-primary ring-0 focus:!outline-none focus:!ring-offset-0   focus-visible:!ring-0 "
+                                        value={1}
+                                    />
+                                    <Button
+                                        variant="icon"
+                                        className={
+                                            "bg-primary text-primary-foreground rounded-l-none"
+                                        }
+                                        size={"sm"}
+                                    >
+                                        <Plus size={15} />
+                                    </Button>
+                                </div>
+                                <Button size={"sm"} className="gap-2">
+                                    <ShoppingCart /> Add To Cart
                                 </Button>
                             </div>
-                            <Button size={"sm"} className="gap-2">
-                                {" "}
-                                <ShoppingCart /> Add To Cart
-                            </Button>
-                        </div>
-                    </DialogHeader>
-                </div>
-            </DialogContent>
-        </Dialog>
+                        </DialogHeader>
+                    </div>
+                </DialogContent>
+            </Dialog>
+        </>
     );
 };
 

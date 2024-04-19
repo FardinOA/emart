@@ -83,7 +83,7 @@ const PopularCategories = () => {
                                 <CustomImage
                                     src={ele.image}
                                     alt={ele.name}
-                                    className="h-full w-full rounded-full aspect-square !object-contain !object-center p-6 "
+                                    className="h-full w-full  aspect-square !object-contain !object-center p-6 "
                                 />
                             </figure>
                             <div className=" mt-1  ">

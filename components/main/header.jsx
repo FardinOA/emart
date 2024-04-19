@@ -36,7 +36,11 @@ const Header = () => {
                 />
                 <div className=" hidden w-full lg:flex items-center">
                     <Input placeholder="Search..." className="rounded-r-none" />{" "}
-                    <Button aria-label="search" className="rounded-l-none">
+                    <Button
+                        size={"icon"}
+                        aria-label="search"
+                        className="rounded-l-none"
+                    >
                         <Search />
                     </Button>
                 </div>

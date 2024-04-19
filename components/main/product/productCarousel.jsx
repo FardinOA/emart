@@ -21,7 +21,7 @@ const ProductCarousel = () => {
                             <CustomImage
                                 src={"/images/phone.jpg"}
                                 alt={"product name"}
-                                className={" w-32 lg:w-56 mx-auto"}
+                                className={" w-56 mx-auto"}
                             />
                         </CarouselItem>
                     ))}
