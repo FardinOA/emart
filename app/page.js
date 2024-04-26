@@ -12,7 +12,7 @@ export default function Home() {
 
             <FlashSale />
             <FeaturedSection />
-            <div className="h-screen"></div>
+            {/* <div className="h-screen"></div> */}
             {/* <div className="h-screen"></div>
             <div className="h-screen"></div> */}
         </main>

@@ -20,7 +20,7 @@ import { Input } from "../ui/input";
 const Footer = () => {
     return (
         <footer className=" ">
-            <div className="bg-primary text-white p-4 lg:p-0">
+            {/* <div className="bg-primary text-white p-4 lg:p-0">
                 <div className="   base-container py-4 divide-y-2  lg:divide-y-0 lg:divide-x-2 grid grid-cols-1 lg:grid-cols-4  ">
                     <div className="flex gap-4 pb-4 lg:pb-0 ">
                         <Gem className="stroke-secondary size-12 " />
@@ -69,7 +69,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className=" base-container py-12 grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-10">
                 <div className="lg:col-span-2 h-full">
@@ -200,7 +200,7 @@ const Footer = () => {
             </div>
 
             <div className="bg-[#F7F7F7] rounded-xl border p-4 lg:p-8 flex flex-col lg:flex-row gap-4 justify-between items-center base-container ">
-                <div className="space-y-3 text-center">
+                <div className="space-y-3 ">
                     <p className="font-bold lg:text-4xl ">Newsletter</p>
                     <p className="font-semibold text-sm lg:text-base">
                         Signup our newsletter to get update information, news,

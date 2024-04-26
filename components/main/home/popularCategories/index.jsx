@@ -6,6 +6,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import CustomImage from "../../uitils/customImage";
+import { Star } from "lucide-react";
 const category = [
     {
         id: 1,
@@ -71,7 +72,7 @@ const category = [
 
 const PopularCategories = () => {
     return (
-        <div className="base-container">
+        <div className="base-container ">
             <Carousel>
                 <CarouselContent>
                     {category?.map((ele, ind) => (
@@ -79,11 +80,11 @@ const PopularCategories = () => {
                             className={" basis-1/3 lg:basis-[10%]  px-4      "}
                             key={`popular-categories-${ele.id}`}
                         >
-                            <figure className="bg-gradient-to-br rounded-full from-primary/30 via-white to-white  ">
+                            <figure className="bg-gradient-to-br rounded-full group from-primary/30 via-white to-white relative  ">
                                 <CustomImage
                                     src={ele.image}
                                     alt={ele.name}
-                                    className="h-full w-full  aspect-square !object-contain !object-center p-6 "
+                                    className="h-full w-full  aspect-square !object-contain !object-center p-6 z-[0] group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 transform-gpu "
                                 />
                             </figure>
                             <div className=" mt-1  ">

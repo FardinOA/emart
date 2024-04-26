@@ -16,11 +16,9 @@ const SidebarCart = () => {
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetTitle>Cart</SheetTitle>
                     <SheetDescription>
-                        This action cannot be undone. This will permanently
-                        delete your account and remove your data from our
-                        servers.
+                        Cart Component will render here
                     </SheetDescription>
                 </SheetHeader>
             </SheetContent>
