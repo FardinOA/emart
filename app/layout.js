@@ -9,6 +9,7 @@ const poppins = Poppins({
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     display: "swap",
+    variable: "--font-poppins",
 });
 export const metadata = {
     title: "E-Mart",
@@ -20,8 +21,8 @@ export default function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-background font-sans antialiased relative",
-                    poppins.className
+                    "min-h-screen bg-background font-poppins antialiased relative",
+                    poppins.variable
                 )}
             >
                 <Header />

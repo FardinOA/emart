@@ -1,6 +1,7 @@
 import FeaturedSection from "@/components/main/home/FeaturedSection";
 import FlashSale from "@/components/main/home/flashSale";
 import Hero from "@/components/main/home/hero";
+import NewArrival from "@/components/main/home/newArrival";
 import PopularCategories from "@/components/main/home/popularCategories";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ export default function Home() {
 
             <FlashSale />
             <FeaturedSection />
+            <NewArrival />
             {/* <div className="h-screen"></div> */}
             {/* <div className="h-screen"></div>
             <div className="h-screen"></div> */}

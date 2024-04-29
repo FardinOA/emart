@@ -5,7 +5,7 @@ import Card from "../../product/card";
 
 const FlashSale = () => {
     return (
-        <div className=" base-container mt-12 p-4 bg-white shadow-xl rounded-xl grid grid-cols-1 lg:grid-cols-11 gap-4 ">
+        <div className=" base-container mt-12 p-4 bg-white shadow-[0px_0px_50px_0px_rgba(0,0,0,0.1)] rounded-xl grid grid-cols-1 lg:grid-cols-11 gap-4 ">
             <div className="lg:col-span-2 space-y-4">
                 <figure className="bg-gray-100 rounded-full p-4 w-fit mx-auto">
                     <CustomImage
