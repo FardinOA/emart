@@ -29,9 +29,13 @@ import {
 const Card = () => {
     return (
         // <div className="hover:bg-primary transition-all duration-300 p-[1px] rounded-lg overflow-hidden group relative  ">
-        <div className="   bg-white rounded-[4px] p-4 group relative transition-all duration-500 hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
+        <div className="   bg-white rounded-lg p-4 group relative transition-all duration-500 hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
             <QuickView />
-            <Link aria-label={"link"} href={"#"} className="">
+            <Link
+                aria-label={"link"}
+                href={"/products/samsung-hdr-smart-qled=tv"}
+                className=""
+            >
                 <p className="bg-yellow-400  size-10 rounded-full absolute top-2 right-2 text-xs flex items-center justify-center ">
                     <span>Sale!</span>
                 </p>

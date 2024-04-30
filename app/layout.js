@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/main/header";
 import Footer from "@/components/main/footer";
+import BottomNav from "@/components/main/bottomNav";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 const poppins = Poppins({
@@ -21,13 +22,14 @@ export default function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-background font-poppins antialiased relative",
+                    "min-h-screen bg-background font-poppins antialiased relative  ",
                     poppins.variable
                 )}
             >
                 <Header />
                 {children}
                 <Footer />
+                <BottomNav />
             </body>
         </html>
     );

@@ -4,10 +4,11 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { MapPin, Phone, Search, UserCircle } from "lucide-react";
 import SidebarCart from "./cart/sidebarCart";
+import MobileMenuBar from "./mobileMenuBar";
 
 const Header = () => {
     return (
-        <header className="shadow-sm ">
+        <header className="shadow-sm sticky top-0 left-0 z-[99] bg-white ">
             <nav className=" hidden lg:block border-b ">
                 <div className="text-xs text-gray-400 base-container py-4 flex items-center justify-between">
                     <div>
@@ -28,11 +29,22 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <nav className="base-container py-4 flex items-center justify-between gap-2 lg:gap-6   ">
+            <nav className="base-container bg-primary/30 lg:bg-inherit py-2 lg:py-4 flex items-center  justify-between gap-2 lg:gap-6   ">
+                <div className="lg:hidden overflow-hidden flex-1 rounded-full relative ">
+                    {/* <UserCircle
+                        size={30}
+                        className="stroke-primary absolute right-[8px] top-1/2 -translate-y-1/2 "
+                    /> */}
+                    <MobileMenuBar />
+                    <Input
+                        placeholder="Search in E-mart"
+                        className={"w-full  rounded-full pl-6  "}
+                    />
+                </div>
                 <CustomImage
                     src={`/images/logo.png`}
                     alt="logo"
-                    className=" w-32 lg:w-40"
+                    className=" hidden lg:block w-32 lg:w-40"
                 />
                 <div className=" hidden w-full lg:flex items-center">
                     <Input placeholder="Search..." className="rounded-r-none" />{" "}
@@ -44,7 +56,7 @@ const Header = () => {
                         <Search />
                     </Button>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="hidden lg:flex items-center gap-4">
                     <div className="flex items-center  ">
                         <UserCircle size={30} className="stroke-primary" />
                         <Button
