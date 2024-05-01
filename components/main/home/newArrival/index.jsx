@@ -8,12 +8,13 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 const NewArrival = () => {
     return (
         <div className="base-container py-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 ">
             <div className="lg:col-span-2 space-y-4 lg:space-y-4 ">
-                <div className="rounded-lg p-4 border space-y-4 ">
+                <div className="rounded-lg p-4 border space-y-6 ">
                     <div className="space-y-1">
                         <Truck className="stroke-primary text-center mx-auto " />
                         <p className=" font-medium lg:leading-6 text-center  ">
@@ -44,9 +45,11 @@ const NewArrival = () => {
                         </p>
                     </div>
                 </div>
-                <div className="rounded-lg border space-y-4 bg-gradient-to-b from-accent  to-white ">
+                <div className="rounded-lg border space-y-5 bg-gradient-to-b from-accent  to-white ">
                     <div className="p-4 pb-0 ">
-                        <p className=" text-primary text-center  ">Promo</p>
+                        <p className=" text-primary-foreground text-center  ">
+                            Promo
+                        </p>
                         <p className="font-bold text-center  lg:leading-6 ">
                             Discount up to 30% for first purchase!
                         </p>
@@ -61,11 +64,14 @@ const NewArrival = () => {
                 </div>
             </div>
             <div className="lg:col-span-10 space-y-4 pt-2 ">
-                <div className="flex items-center gap-1">
+                <div className="flex items-center justify-between gap-1 border-b-[1px] border-b-gray-300 pb-2 ">
                     <p className=" font-bold text-xl lg:text-2xl 2xl:text-3xl text-nowrap ">
                         New Arrival
                     </p>
-                    <p className=" bg-gray-200 h-[1px] w-full "></p>
+
+                    <Link href={"/products"}>
+                        <Button size="sm">View All</Button>
+                    </Link>
                 </div>
                 <div className="hidden lg:grid grid-cols-2 lg:grid-cols-4 gap-2">
                     <Card />

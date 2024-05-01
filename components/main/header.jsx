@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import SidebarCart from "./cart/sidebarCart";
 import MobileMenuBar from "./mobileMenuBar";
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -49,13 +50,17 @@ const Header = () => {
                     <div className="flex items-center gap-2 ">
                         <Bell />
                         <SearchIcon />
+                        <SidebarCart />
                     </div>
                 </div>
-                <CustomImage
-                    src={`/images/logo.png`}
-                    alt="logo"
-                    className=" hidden lg:block w-32 lg:w-40"
-                />
+                <Link href={`/`}>
+                    {" "}
+                    <CustomImage
+                        src={`/images/logo.png`}
+                        alt="logo"
+                        className=" hidden lg:block w-32 lg:w-40"
+                    />
+                </Link>
                 <div className=" hidden w-full lg:flex items-center">
                     <Input placeholder="Search..." className="rounded-r-none" />{" "}
                     <Button

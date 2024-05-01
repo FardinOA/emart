@@ -4,19 +4,19 @@
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
+        --background: 290 33% 96%;
         --foreground: 240 10% 3.9%;
-        --card: 0 0% 100%;
+        --card: 290 33% 96%;
         --card-foreground: 240 10% 3.9%;
-        --popover: 0 0% 100%;
+        --popover: 290 33% 96%;
         --popover-foreground: 240 10% 3.9%;
-        --primary: 346.8 77.2% 49.8%;
-        --primary-foreground: 355.7 100% 97.3%;
-        --secondary: 240 4.8% 95.9%;
+        --primary: 284 46% 51%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 283 59% 74%;
         --secondary-foreground: 240 5.9% 10%;
         --muted: 240 4.8% 95.9%;
         --muted-foreground: 240 3.8% 46.1%;
-        --accent: 240 4.8% 95.9%;
+        --accent: 284 72% 65%;
         --accent-foreground: 240 5.9% 10%;
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
@@ -27,19 +27,19 @@
     }
 
     .dark {
-        --background: 20 14.3% 4.1%;
+        --background: 283 33% 4%;
         --foreground: 0 0% 95%;
-        --card: 24 9.8% 10%;
+        --card: 283 33% 4%;
         --card-foreground: 0 0% 95%;
-        --popover: 0 0% 9%;
+        --popover: 283 33% 4%;
         --popover-foreground: 0 0% 95%;
-        --primary: 346.8 77.2% 49.8%;
-        --primary-foreground: 355.7 100% 97.3%;
-        --secondary: 240 3.7% 15.9%;
+        --primary: 284 46% 49%;
+        --primary-foreground: 285 22% 93%;
+        --secondary: 283 59% 26%;
         --secondary-foreground: 0 0% 98%;
         --muted: 0 0% 15%;
         --muted-foreground: 240 5% 64.9%;
-        --accent: 12 6.5% 15.1%;
+        --accent: 284 72% 35%;
         --accent-foreground: 0 0% 98%;
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 85.7% 97.3%;
@@ -57,6 +57,24 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; /* edge*/
+    scrollbar-width: none; /* firefox */
+}
+
+/* ::-webkit-scrollbar-track {
+    @apply bg-inherit;
+}
+ 
+::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-secondary hover:bg-secondary/70 transition-all duration-300;
+} */
 
 .base-container {
     @apply container;

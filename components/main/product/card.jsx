@@ -29,7 +29,7 @@ import {
 const Card = () => {
     return (
         // <div className="hover:bg-primary transition-all duration-300 p-[1px] rounded-lg overflow-hidden group relative  ">
-        <div className="   bg-white rounded-2xl p-4  relative transition-all duration-500 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)] lg:shadow-none lg:hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
+        <div className="   bg-white rounded-lg p-4  relative transition-all duration-500 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)] lg:shadow-none lg:hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
             <QuickView />
             <Link
                 aria-label={"link"}

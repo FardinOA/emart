@@ -5,15 +5,20 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const OnSale = () => {
     return (
         <div className=" base-container space-y-4 py-10 lg:py-20 ">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center justify-between gap-1 border-b-[1px] border-b-gray-300 pb-2 ">
                 <p className=" font-bold text-xl lg:text-2xl 2xl:text-3xl text-nowrap ">
-                    Product on sale!
+                    New Arrival
                 </p>
-                <p className=" bg-gray-200 h-[1px] w-full "></p>
+
+                <Link href={"/products"}>
+                    <Button size="sm">View All</Button>
+                </Link>
             </div>
 
             <div className="hidden lg:grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2">
