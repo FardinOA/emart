@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/main/header";
 import Footer from "@/components/main/footer";
 import BottomNav from "@/components/main/bottomNav";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 const poppins = Poppins({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
                     poppins.variable
                 )}
             >
+                <Toaster duration={3000} />
                 <Header />
                 {children}
                 <Footer />

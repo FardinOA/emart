@@ -73,7 +73,12 @@ const category = [
 const PopularCategories = () => {
     return (
         <div className="base-container ">
-            <Carousel>
+            <Carousel
+                opts={{
+                    align: "start",
+                    dragFree: true,
+                }}
+            >
                 <CarouselContent>
                     {category?.map((ele, ind) => (
                         <CarouselItem

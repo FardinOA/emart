@@ -2,13 +2,20 @@ import React from "react";
 import CustomImage from "./uitils/customImage";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { MapPin, Phone, Search, UserCircle } from "lucide-react";
+import {
+    Bell,
+    MapPin,
+    Phone,
+    Search,
+    SearchIcon,
+    UserCircle,
+} from "lucide-react";
 import SidebarCart from "./cart/sidebarCart";
 import MobileMenuBar from "./mobileMenuBar";
 
 const Header = () => {
     return (
-        <header className="shadow-sm sticky top-0 left-0 z-[99] bg-white ">
+        <header className="shadow-sm fixed w-full lg:sticky top-0 left-0 z-50   bg-white ">
             <nav className=" hidden lg:block border-b ">
                 <div className="text-xs text-gray-400 base-container py-4 flex items-center justify-between">
                     <div>
@@ -29,17 +36,20 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <nav className="base-container bg-primary/30 lg:bg-inherit py-2 lg:py-4 flex items-center  justify-between gap-2 lg:gap-6   ">
-                <div className="lg:hidden overflow-hidden flex-1 rounded-full relative ">
-                    {/* <UserCircle
-                        size={30}
-                        className="stroke-primary absolute right-[8px] top-1/2 -translate-y-1/2 "
-                    /> */}
-                    <MobileMenuBar />
-                    <Input
-                        placeholder="Search in E-mart"
-                        className={"w-full  rounded-full pl-6  "}
-                    />
+            <nav className="base-container  lg:py-4 flex items-center  justify-between gap-2 lg:gap-6   ">
+                <div className="lg:hidden overflow-hidden flex-1   py-2 flex justify-between items-center  ">
+                    <div className="bg-primary/20 rounded-full w-fit flex gap-1 items-center pr-2 ">
+                        <CustomImage
+                            className={`rounded-full size-[35px] p-1 bg-primary `}
+                            alt="user"
+                            src={"/images/businessman.png"}
+                        />
+                        <p className="font-medium text-sm ">Hello&apos; User</p>
+                    </div>
+                    <div className="flex items-center gap-2 ">
+                        <Bell />
+                        <SearchIcon />
+                    </div>
                 </div>
                 <CustomImage
                     src={`/images/logo.png`}

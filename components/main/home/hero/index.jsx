@@ -49,7 +49,7 @@ const Hero = () => {
         },
     ];
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 base-container py-10 ">
+        <div className="grid   grid-cols-1 lg:grid-cols-12 lg:container gap-4 pb-10 lg:py-10 ">
             <div className="lg:col-span-3 hidden lg:block bg-white border rounded-xl p-4 ">
                 <p className="text-center font-semibold text-gray-600 w-full">
                     Categories
@@ -75,7 +75,7 @@ const Hero = () => {
                     ))}
                 </div>
             </div>
-            <div className="lg:col-span-9 h-full">
+            <div className="lg:col-span-9 h-full   ">
                 <HeroCarousel />
             </div>
         </div>

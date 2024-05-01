@@ -29,12 +29,12 @@ import {
 const Card = () => {
     return (
         // <div className="hover:bg-primary transition-all duration-300 p-[1px] rounded-lg overflow-hidden group relative  ">
-        <div className="   bg-white rounded-lg p-4 group relative transition-all duration-500 hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
+        <div className="   bg-white rounded-2xl p-4  relative transition-all duration-500 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)] lg:shadow-none lg:hover:shadow-[0px_0px_5px_0px_rgba(0,0,0,0.1)]   ">
             <QuickView />
             <Link
                 aria-label={"link"}
                 href={"/products/samsung-hdr-smart-qled=tv"}
-                className=""
+                className="group"
             >
                 <p className="bg-yellow-400  size-10 rounded-full absolute top-2 right-2 text-xs flex items-center justify-center ">
                     <span>Sale!</span>
@@ -44,7 +44,9 @@ const Card = () => {
                     src={`/images/phone.jpg`}
                     alt={"phone"}
                 />
-                <h2 className=" my-2 ">Mizuna 8 Pro Android Smartphone</h2>
+                <h2 className=" my-2 group-hover:text-primary transition-all duration-300 ">
+                    Mizuna 8 Pro Android Smartphone
+                </h2>
                 <span className=" flex items-center gap-2 ">
                     <del aria-hidden="true">
                         <span className=" text-gray-400">

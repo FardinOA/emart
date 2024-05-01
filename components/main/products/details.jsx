@@ -10,13 +10,31 @@ import React from "react";
 import CustomImage from "../uitils/customImage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import BuyNow from "./BuyNow";
+import BuyNowMobile from "./BuyNowMobile";
+import { toast } from "@/components/ui/use-toast";
+import AddToCard from "./AddToCard";
 
 const Details = () => {
     return (
-        <div className=" py-10 lg:py-20 ">
+        <div className=" py-20  ">
+            <div className="lg:hidden fixed left-0 bottom-0 bg-primary  z-50 w-full flex justify-between gap-1 px-2 py-3 items-center ">
+                <div className="text-primary-foreground">
+                    <p>Price:</p>
+                    <p className="font-bold text-lg ">$8490.00</p>
+                </div>
+                <AddToCard
+                    btnClassName={
+                        "rounded-full bg-white text-primary hover:bg-gray-100 "
+                    }
+                />
+                <div>
+                    <BuyNowMobile />
+                </div>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 base-container ">
                 <div className="lg:col-span-4">
-                    <div className="rounded-xl p-6 border space-y-8 relative ">
+                    <div className="rounded-xl lg:p-6 lg:border space-y-8 relative ">
                         <Carousel>
                             <CarouselContent>
                                 {Array(5)
@@ -27,13 +45,15 @@ const Details = () => {
                                         >
                                             <CustomImage
                                                 src={`/images/tv.jpg`}
-                                                className={``}
+                                                className={` bg-blend-multiply  `}
                                             />
                                         </CarouselItem>
                                     ))}
                             </CarouselContent>
-                            <CarouselPrevious className={"left-0"} />
-                            <CarouselNext className={"right-0"} />
+                            <div className=" hidden lg:block ">
+                                <CarouselPrevious className={"left-0  "} />
+                                <CarouselNext className={"right-0 "} />
+                            </div>
                         </Carousel>
                     </div>
                 </div>
@@ -72,27 +92,16 @@ const Details = () => {
                                 <li>4k Ultra HD (2160px)</li>
                                 <li>Quantum Processor 4k</li>
                             </ul>
-                            <div className="flex flex-col gap-2 w-fit ">
+                            <div className=" hidden lg:flex flex-col gap-2 w-fit ">
                                 <div className="flex items-center gap-2">
-                                    <div>
-                                        <Input
-                                            min={1}
-                                            type="number"
-                                            className={
-                                                "w-24 outline-none rounded-lg focus-visible:ring-0 "
-                                            }
-                                        />
-                                    </div>{" "}
-                                    <Button className={"rounded-lg"}>
-                                        Add to cart
-                                    </Button>
+                                    <AddToCard
+                                        inputClassName={
+                                            "w-24 outline-none rounded-lg focus-visible:ring-0 "
+                                        }
+                                        btnClassName={"rounded-lg"}
+                                    />
                                 </div>
-                                <Button
-                                    variant="outline"
-                                    className={"rounded-lg"}
-                                >
-                                    Buy Now
-                                </Button>
+                                <BuyNow />
                             </div>
                         </div>
                     </div>

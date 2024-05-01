@@ -51,7 +51,7 @@ const HeroCarousel = () => {
                             backgroundImage: `url("${ele.image}")`,
                         }}
                         className={cn(
-                            `  h-[180px] lg:h-[380px] w-full rounded-xl overflew-hidden bg-cover bg-no-repeat object-cover `
+                            `  h-[280px] lg:h-[380px] w-full lg:rounded-xl overflew-hidden  bg-cover bg-no-repeat object-cover `
                         )}
                         key={`hero-banner-${ind}`}
                     >

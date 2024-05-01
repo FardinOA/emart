@@ -3,6 +3,11 @@ import { Banknote, ShieldCheck, Truck } from "lucide-react";
 import React from "react";
 import CustomImage from "../../uitils/customImage";
 import Card from "../../product/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel";
 
 const NewArrival = () => {
     return (
@@ -62,7 +67,7 @@ const NewArrival = () => {
                     </p>
                     <p className=" bg-gray-200 h-[1px] w-full "></p>
                 </div>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+                <div className="hidden lg:grid grid-cols-2 lg:grid-cols-4 gap-2">
                     <Card />
                     <Card />
                     <Card />
@@ -71,6 +76,29 @@ const NewArrival = () => {
                     <Card />
                     <Card />
                     <Card />
+                </div>
+                <div className="lg:hidden">
+                    <Carousel
+                        opts={{
+                            align: "start",
+                            dragFree: true,
+                        }}
+                    >
+                        <CarouselContent className={"py-2 px-2"}>
+                            {Array(10)
+                                .fill(0)
+                                .map((ele, ind) => (
+                                    <CarouselItem
+                                        className={"basis-[70%]"}
+                                        key={``}
+                                    >
+                                        <Card />
+                                    </CarouselItem>
+                                ))}
+                        </CarouselContent>
+                        {/* <CarouselPrevious />
+            <CarouselNext /> */}
+                    </Carousel>
                 </div>
             </div>
         </div>
