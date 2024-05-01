@@ -68,14 +68,23 @@
     scrollbar-width: none; /* firefox */
 }
 
-/* ::-webkit-scrollbar-track {
-    @apply bg-inherit;
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
 }
- 
+
+::-webkit-scrollbar-track {
+    @apply !bg-inherit;
+}
+
 ::-webkit-scrollbar-thumb {
-    @apply rounded-md bg-secondary hover:bg-secondary/70 transition-all duration-300;
-} */
+    @apply !rounded-md !bg-primary hover:!bg-primary/90 transition-all duration-300;
+}
 
 .base-container {
     @apply container;
+}
+
+.cart-input-quantity > input[type="number"]::-webkit-inner-spin-button,
+.cart-input-quantity > input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
 }

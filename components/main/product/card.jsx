@@ -40,16 +40,16 @@ const Card = () => {
                     <span>Sale!</span>
                 </p>
                 <CustomImage
-                    className={"lg:h-[187px]"}
+                    className={" h-[130px] lg:h-[187px]"}
                     src={`/images/phone.jpg`}
                     alt={"phone"}
                 />
-                <h2 className=" my-2 group-hover:text-primary transition-all duration-300 ">
+                <h2 className=" text-sm lg:text-base my-2 group-hover:text-primary transition-all duration-300 ">
                     Mizuna 8 Pro Android Smartphone
                 </h2>
                 <span className=" flex items-center gap-2 ">
                     <del aria-hidden="true">
-                        <span className=" text-gray-400">
+                        <span className=" text-sm lg:text-base text-gray-400">
                             <bdi>
                                 <span className=" ">$</span>
                                 999.00
@@ -57,7 +57,7 @@ const Card = () => {
                         </span>
                     </del>{" "}
                     <ins>
-                        <span className=" text-primary ">
+                        <span className=" text-sm lg:text-base text-primary ">
                             <bdi>
                                 <span className=" ">$</span>
                                 829.00

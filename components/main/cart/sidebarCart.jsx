@@ -1,3 +1,4 @@
+"use client";
 import {
     Sheet,
     SheetContent,
@@ -20,6 +21,7 @@ import { Delete, ShoppingCartIcon, Trash } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import CustomImage from "../uitils/customImage";
+import Link from "next/link";
 
 const SidebarCart = () => {
     return (
@@ -27,7 +29,10 @@ const SidebarCart = () => {
             <SheetTrigger aria-label="open cart">
                 <ShoppingCartIcon size={30} className="stroke-primary" />
             </SheetTrigger>
-            <SheetContent className="overflow-y-scroll no-scrollbar p-0 border-none w-full  ">
+            <SheetContent
+                onOpenAutoFocus={(e) => e.preventDefault()}
+                className="overflow-y-scroll no-scrollbar p-0 border-none w-full  "
+            >
                 <div className="relative ">
                     <div className="p-6">
                         <SheetHeader>
@@ -80,6 +85,7 @@ const SidebarCart = () => {
                                             <CardFooter className={"py-0 pl-2"}>
                                                 <div className="flex items-center w-full justify-between">
                                                     <Input
+                                                        autoFocus={false}
                                                         value={1}
                                                         type="number"
                                                         className={
@@ -107,13 +113,15 @@ const SidebarCart = () => {
                             <p>Total</p> <p>$111.00</p>
                         </div>
                         <div className="flex gap-4">
-                            <Button
-                                variant="outline"
-                                size="lg"
-                                className={" w-full "}
-                            >
-                                View Cart
-                            </Button>
+                            <Link className="w-full" href={`/cart`}>
+                                <Button
+                                    variant="outline"
+                                    size="lg"
+                                    className={" w-full "}
+                                >
+                                    View Cart
+                                </Button>
+                            </Link>
                             <Button className={" w-full "} size="lg">
                                 Checkout
                             </Button>
