@@ -74,16 +74,18 @@ const Header = () => {
                 <div className="hidden lg:flex items-center gap-4">
                     <div className="flex items-center  ">
                         <UserCircle size={30} className="stroke-primary" />
-                        <Button
-                            aria-label="account"
-                            variant="link"
-                            className="flex flex-col px-1"
-                        >
-                            <span className="text-gray-400">Sign in</span>
-                            <span className="font-semibold text-black ">
-                                Account
-                            </span>
-                        </Button>
+                        <Link href={"/login"}>
+                            <Button
+                                aria-label="account"
+                                variant="link"
+                                className="flex flex-col px-1"
+                            >
+                                <span className="text-gray-400">Sign in</span>
+                                <span className="font-semibold text-black ">
+                                    Account
+                                </span>
+                            </Button>
+                        </Link>
                     </div>
 
                     <SidebarCart />

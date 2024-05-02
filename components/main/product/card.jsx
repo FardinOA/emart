@@ -40,7 +40,7 @@ const Card = () => {
                     <span>Sale!</span>
                 </p>
                 <CustomImage
-                    className={" h-[130px] lg:h-[187px]"}
+                    className={"h-[187px]"}
                     src={`/images/phone.jpg`}
                     alt={"phone"}
                 />

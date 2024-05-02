@@ -82,7 +82,9 @@ const PopularCategories = () => {
                 <CarouselContent>
                     {category?.map((ele, ind) => (
                         <CarouselItem
-                            className={" basis-1/3 lg:basis-[10%]  px-4      "}
+                            className={
+                                " basis-[25%] md:basis-1/3 lg:basis-[10%]  px-4      "
+                            }
                             key={`popular-categories-${ele.id}`}
                         >
                             <figure className="bg-gradient-to-br rounded-full group from-primary/30 via-white to-white relative  ">

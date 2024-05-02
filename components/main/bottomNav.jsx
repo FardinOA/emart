@@ -138,13 +138,13 @@ const BottomNav = () => {
                 </span>
             </Link>
             <Link
-                href={`/profile`}
+                href={`/login`}
                 className={cn("relative p-3 rounded-full block")}
                 style={{
                     transformStyle: "preserve-3d",
                 }}
             >
-                {pathName === "/profile" && (
+                {pathName === "/login" && (
                     <motion.div
                         layoutId="clickedbutton"
                         transition={{
@@ -161,7 +161,7 @@ const BottomNav = () => {
                 <span
                     className={cn(
                         "relative block text-primary-foreground ",
-                        pathName === "/profile" && "text-primary"
+                        pathName === "/login" && "text-primary"
                     )}
                 >
                     <User />
