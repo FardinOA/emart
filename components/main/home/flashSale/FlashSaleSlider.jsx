@@ -1,33 +1,31 @@
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Card from "../../product/card";
 
-const FlashSaleSlider = () => {
-    return (
-        <Carousel
-            opts={{
-                align: "start",
-                dragFree: true,
-            }}
-        >
-            <CarouselContent className={"py-4 px-2"}>
-                {Array(10)
-                    .fill(0)
-                    .map((ele, ind) => (
-                        <CarouselItem className={"basis-[70%]"} key={``}>
-                            <Card />
-                        </CarouselItem>
-                    ))}
-            </CarouselContent>
-            {/* <CarouselPrevious />
+const FlashSaleSlider = ({ data }) => {
+  return (
+    <Carousel
+      opts={{
+        align: "start",
+        dragFree: true,
+      }}
+    >
+      <CarouselContent className={"py-4 px-2"}>
+        {data?.map((ele, ind) => (
+          <CarouselItem className={"basis-[70%]"} key={`flash-sale-${ele?.id}`}>
+            <Card ele={ele} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      {/* <CarouselPrevious />
             <CarouselNext /> */}
-        </Carousel>
-    );
+    </Carousel>
+  );
 };
 
 export default FlashSaleSlider;
